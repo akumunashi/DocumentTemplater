@@ -20,6 +20,11 @@ namespace DocumentTemplater
                 if (opf.ShowDialog() == DialogResult.OK)
                 {
                     template = Templates.Template.GetTemplateFromFileName(System.IO.Path.GetExtension(opf.FileName));
+                    if (template == null)
+                    {
+                        MessageBox.Show("Указанный документ не является доступным к заполнению шаблону.");
+                        return;
+                    }
                 }
             }
         }
