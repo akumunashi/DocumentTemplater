@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.OpenFile_btn = new System.Windows.Forms.ToolStripButton();
             this.SaveFile_btn = new System.Windows.Forms.ToolStripButton();
             this.SendFile_btn = new System.Windows.Forms.ToolStripButton();
-            this.PreviewFile_btn = new System.Windows.Forms.ToolStripButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,22 +41,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenFile_btn,
             this.SaveFile_btn,
-            this.SendFile_btn,
-            this.PreviewFile_btn});
+            this.SendFile_btn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(761, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(296, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(761, 483);
-            this.panel1.TabIndex = 1;
             // 
             // OpenFile_btn
             // 
@@ -92,26 +81,26 @@
             this.SendFile_btn.ToolTipText = "Отправить файл на почту";
             this.SendFile_btn.Click += new System.EventHandler(this.SendFile_btn_Click);
             // 
-            // PreviewFile_btn
+            // flowLayoutPanel1
             // 
-            this.PreviewFile_btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PreviewFile_btn.Image = global::DocumentTemplater.Properties.Resources.icons8_preview_100;
-            this.PreviewFile_btn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PreviewFile_btn.Name = "PreviewFile_btn";
-            this.PreviewFile_btn.Size = new System.Drawing.Size(23, 22);
-            this.PreviewFile_btn.Text = "Предпросмотр документа";
-            this.PreviewFile_btn.Click += new System.EventHandler(this.PreviewFile_btn_Click);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 25);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(296, 483);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 508);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(296, 508);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Заполнение шаблонов";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -125,8 +114,7 @@
         private System.Windows.Forms.ToolStripButton OpenFile_btn;
         private System.Windows.Forms.ToolStripButton SaveFile_btn;
         private System.Windows.Forms.ToolStripButton SendFile_btn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripButton PreviewFile_btn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

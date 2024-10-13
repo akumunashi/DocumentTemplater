@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Database" namespace="Database.Domain">
+  <class name="Log" table="Logs">
+    <id name="Id" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Method" column="Method" type="string"/>
+    <property name="Message" column="Message" type="string"/>
+    <property name="DateAction" column="DateAction" type="DateTime"/>
+  </class>
+</hibernate-mapping>

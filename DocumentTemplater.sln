@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentTemplater", "DocumentTemplater\DocumentTemplater.csproj", "{FBEAB997-6D5C-4239-9556-BE46A6068454}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendEmail", "SendEmail\SendEmail.csproj", "{9193B8BB-D3E8-4689-8B11-18019BD088FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{9AB656CD-EE66-47D7-B59F-0BCB9ECE46F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FBEAB997-6D5C-4239-9556-BE46A6068454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBEAB997-6D5C-4239-9556-BE46A6068454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBEAB997-6D5C-4239-9556-BE46A6068454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9193B8BB-D3E8-4689-8B11-18019BD088FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9193B8BB-D3E8-4689-8B11-18019BD088FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9193B8BB-D3E8-4689-8B11-18019BD088FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9193B8BB-D3E8-4689-8B11-18019BD088FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB656CD-EE66-47D7-B59F-0BCB9ECE46F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB656CD-EE66-47D7-B59F-0BCB9ECE46F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB656CD-EE66-47D7-B59F-0BCB9ECE46F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB656CD-EE66-47D7-B59F-0BCB9ECE46F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

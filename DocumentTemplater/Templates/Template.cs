@@ -1,4 +1,6 @@
-﻿namespace DocumentTemplater.Templates
+﻿using System.Collections.Generic;
+
+namespace DocumentTemplater.Templates
 {
     /// <summary>
     /// Шаблон документа.
@@ -11,26 +13,38 @@
         public abstract string FileName { get; }
 
         /// <summary>
-        /// Загрузить документ.
+        /// Сохранить документ по указанному пути.
         /// </summary>
-        public abstract void Load();
+        /// <param name="pathToSave"> Путь к документу для сохранения.</param>
+        public abstract void SaveAs(string pathToSave);
 
         /// <summary>
-        /// Сохранить документ.
+        /// Получить имена закладок в документе.
         /// </summary>
-        public abstract void Save();
+        public abstract IEnumerable<string> GetNameBookmarks();
 
         /// <summary>
-        /// Предпросмотр в PDF.
+        /// Обновить значения закладок в документе перед сохранением.
         /// </summary>
-        public abstract void PdfPreview();
+        /// <param name="dictionaryBookmarks"> Словарь закладок и их значений.</param>
+        public abstract void RefreshValuesBookmarks(Dictionary<string, string> dictionaryBookmarks);
 
+        /// <summary>
+        /// Закрыть документ.
+        /// </summary>
+        public abstract void CloseDocument();
+
+        /// <summary>
+        /// Получить шаблон документа из пути к файлу.
+        /// </summary>
+        /// <param name="fileName"> Путь к файлу.</param>
+        /// <returns> Шаблон документа.</returns>
         public static Template GetTemplateFromFileName(string fileName)
         {
             var extension = System.IO.Path.GetExtension(fileName);
             switch (extension)
             {
-                case ".docx": return new WordTemplate();
+                case ".docx": return new WordTemplate(fileName);
                 default: return null;
             }
         }
